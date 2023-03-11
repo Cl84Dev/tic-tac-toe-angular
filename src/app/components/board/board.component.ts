@@ -13,67 +13,33 @@ export class BoardComponent {
   scoring(): void {
     {
       if (
-        (this.plays[0] === 'X' &&
-          this.plays[1] === 'X' &&
-          this.plays[2] === 'X') ||
-        (this.plays[3] === 'X' &&
-          this.plays[4] === 'X' &&
-          this.plays[5] === 'X') ||
-        (this.plays[6] === 'X' &&
-          this.plays[7] === 'X' &&
-          this.plays[8] === 'X') ||
-        (this.plays[0] === 'X' &&
-          this.plays[3] === 'X' &&
-          this.plays[6] === 'X') ||
-        (this.plays[1] === 'X' &&
-          this.plays[4] === 'X' &&
-          this.plays[7] === 'X') ||
-        (this.plays[2] === 'X' &&
-          this.plays[5] === 'X' &&
-          this.plays[8] === 'X') ||
-        (this.plays[0] === 'X' &&
-          this.plays[4] === 'X' &&
-          this.plays[8] === 'X') ||
-        (this.plays[2] === 'X' &&
-          this.plays[4] === 'X' &&
-          this.plays[6] === 'X') ||
-        (this.plays[0] === 'O' &&
-          this.plays[1] === 'O' &&
-          this.plays[2] === 'O') ||
-        (this.plays[3] === 'O' &&
-          this.plays[4] === 'O' &&
-          this.plays[5] === 'O') ||
-        (this.plays[6] === 'O' &&
-          this.plays[7] === 'O' &&
-          this.plays[8] === 'O') ||
-        (this.plays[0] === 'O' &&
-          this.plays[3] === 'O' &&
-          this.plays[6] === 'O') ||
-        (this.plays[1] === 'O' &&
-          this.plays[4] === 'O' &&
-          this.plays[7] === 'O') ||
-        (this.plays[2] === 'O' &&
-          this.plays[5] === 'O' &&
-          this.plays[8] === 'O') ||
-        (this.plays[0] === 'O' &&
-          this.plays[4] === 'O' &&
-          this.plays[8] === 'O') ||
-        (this.plays[2] === 'O' &&
-          this.plays[4] === 'O' &&
-          this.plays[6] === 'O')
+        (this.plays[0] === this.plays[1] &&
+          this.plays[1] === this.plays[2] &&
+          this.plays[2] !== null) ||
+        (this.plays[3] === this.plays[4] &&
+          this.plays[4] === this.plays[5] &&
+          this.plays[5] !== null) ||
+        (this.plays[6] === this.plays[7] &&
+          this.plays[7] === this.plays[8] &&
+          this.plays[8] !== null) ||
+        (this.plays[0] === this.plays[3] &&
+          this.plays[3] === this.plays[6] &&
+          this.plays[6] !== null) ||
+        (this.plays[1] === this.plays[4] &&
+          this.plays[4] === this.plays[7] &&
+          this.plays[7] !== null) ||
+        (this.plays[2] === this.plays[5] &&
+          this.plays[5] === this.plays[8] &&
+          this.plays[8] !== null) ||
+        (this.plays[0] === this.plays[4] &&
+          this.plays[4] === this.plays[8] &&
+          this.plays[8] !== null) ||
+        (this.plays[2] === this.plays[4] &&
+          this.plays[4] === this.plays[6] &&
+          this.plays[6] !== null)
       ) {
         this.running = 'win';
-      } else if (
-        this.plays[0] &&
-        this.plays[1] &&
-        this.plays[2] &&
-        this.plays[3] &&
-        this.plays[4] &&
-        this.plays[5] &&
-        this.plays[6] &&
-        this.plays[7] &&
-        this.plays[8]
-      ) {
+      } else if (this.plays.filter((play) => play).length === 9) {
         this.running = 'draw';
       }
     }

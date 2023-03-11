@@ -8,13 +8,12 @@
 }
 
 .board {
-  background-color: black;
-  padding: 5px;
-}
-
-.row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  width: 340px;
+  background-color: black;
+  padding: 5px;
 }
 
 .square {
