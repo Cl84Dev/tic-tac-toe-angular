@@ -1,16 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 
 * {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Share Tech Mono", monospace;
 }
 
-h1 {
-  margin: 50px;
+.square {
+  font-size: 2.5rem;
 }

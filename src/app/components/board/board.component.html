@@ -1,0 +1,60 @@
+<div class="board">
+  <div class="row">
+    <app-square
+      class="square"
+      [square]="plays[0]"
+      (click)="play(0)"
+    ></app-square>
+    <app-square
+      class="square"
+      [square]="plays[1]"
+      (click)="play(1)"
+    ></app-square>
+    <app-square
+      class="square"
+      [square]="plays[2]"
+      (click)="play(2)"
+    ></app-square>
+  </div>
+  <div class="row">
+    <app-square
+      class="square"
+      [square]="plays[3]"
+      (click)="play(3)"
+    ></app-square>
+    <app-square
+      class="square"
+      [square]="plays[4]"
+      (click)="play(4)"
+    ></app-square>
+    <app-square
+      class="square"
+      [square]="plays[5]"
+      (click)="play(5)"
+    ></app-square>
+  </div>
+  <div class="row">
+    <app-square
+      class="square"
+      [square]="plays[6]"
+      (click)="play(6)"
+    ></app-square>
+    <app-square
+      class="square"
+      [square]="plays[7]"
+      (click)="play(7)"
+    ></app-square>
+    <app-square
+      class="square"
+      [square]="plays[8]"
+      (click)="play(8)"
+    ></app-square>
+  </div>
+</div>
+
+<app-result
+  [result]="running"
+  [xOrO]="xOrO"
+  *ngIf="running !== 'running'"
+  (resetGame)="onResetGame()"
+></app-result>

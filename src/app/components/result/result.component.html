@@ -1,0 +1,10 @@
+<div class="result">
+  <h2 *ngIf="result === 'win'">
+    <span [style]="xOrO ? 'color: red' : 'color: blue'">{{
+      xOrO ? "O" : "X"
+    }}</span>
+    wins!!!
+  </h2>
+  <h2 *ngIf="result === 'draw'">Draw!!!</h2>
+  <div class="button" (click)="handleClick()">Restart Game</div>
+</div>
